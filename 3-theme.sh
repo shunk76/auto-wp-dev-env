@@ -5,17 +5,17 @@ eval $(parse_yaml site.yml "conf_")
 
 # テーマ ディレクトリ
 DIR=../$conf_hostname/wordpress/wp-content/themes/$conf_hostname
-SRC=resources/src
+SRC=$DIR/resources/src
 
 # github reository
 REPOSITORY=wp-theme-dev-env
-
-cd $DIR
 
 # src ディレクトリ作成
 mkdir -p $SRC/scss $SRC/js
 touch $SRC/scss/style.scss
 touch $SRC/js/index.js
+
+cd $DIR
 
 # wp-theme-dev-env をインストール
 git clone git@github.com:shunk76/$REPOSITORY.git
@@ -30,3 +30,5 @@ ncu -u
 
 # package をインストール
 npm i
+
+npm start

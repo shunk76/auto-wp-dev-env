@@ -13,3 +13,5 @@ mv vccw ../$conf_hostname
 # VCCW を起動
 cd ../$conf_hostname
 vagrant up
+
+cd -
