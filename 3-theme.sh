@@ -21,5 +21,8 @@ rm -rf $REPOSITORY
 # site.yml を削除
 rm -f site.yml
 
+#npm-check-updates
 ncu -u
+
+# package をインストール
 npm i
