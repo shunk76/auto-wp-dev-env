@@ -31,12 +31,14 @@ cp theme.sh plugin.sh parse_yaml.sh ../$conf_hostname/bin/
 cd ../$conf_hostname
 vagrant up
 
+cd bin
+
 # テーマ開発の場合
 if [ $TYPE = theme ]; then
-  . bin/theme.sh
+  . theme.sh
 fi
 
 # プラグイン開発の場合
 if [ $TYPE = plugin ]; then
-  . bin/plugin.sh
+  . plugin.sh
 fi
