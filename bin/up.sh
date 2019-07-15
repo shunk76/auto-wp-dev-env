@@ -21,9 +21,6 @@ vi vccw/site.yml
 . parse_yaml.sh
 eval $(parse_yaml vccw/site.yml "conf_")
 
-# site.yml をコピー。theme.sh, plugin.sh で使用
-# cp vccw/site.yml ./
-
 # vccw フォルダ名を変更して、1つ上の階層に移動
 mv vccw ../$conf_hostname
 
@@ -34,20 +31,12 @@ cp theme.sh plugin.sh parse_yaml.sh ../$conf_hostname/bin/
 cd ../$conf_hostname
 vagrant up
 
-# 移動前のディレクトリに戻る
-# cd -
-
 # テーマ開発の場合
 if [ $TYPE = theme ]; then
   . bin/theme.sh
 fi
 
-
 # プラグイン開発の場合
 if [ $TYPE = plugin ]; then
   . bin/plugin.sh
 fi
-
-
-
-
