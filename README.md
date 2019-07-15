@@ -39,7 +39,7 @@ plugin slug?: example
 localhost が立ち上がる。
 
 ## すでに VCCW をダウンロード済み
-すでに、example.test ディレクトリに VCCW がインストールされていて、
+すでに、example.test ディレクトリに VCCW がインストールされていて、新しくテーマ・プラグインを作成
 
 ### theme を開発
 ```
